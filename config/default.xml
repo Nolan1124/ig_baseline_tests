@@ -3,7 +3,7 @@
   <Config name="default">
     <Lockserver address="127.0.0.1"/>
     <Host address="127.0.0.1">
-      <Disk location="./data"/>
+      <Disk location="/Users/henocka/current/ig_baseline_tests/working/data"/>
     </Host>
   </Config>
 </ConfigList>

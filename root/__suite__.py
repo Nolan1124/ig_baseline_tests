@@ -4,5 +4,5 @@ description = "Benchmark to compare varies operation of the Infinite Graph datab
 
 #add suite directories to this list.
 suites = [
-
+    "vertex_operations"
     ]
