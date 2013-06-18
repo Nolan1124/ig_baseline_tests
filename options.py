@@ -1,0 +1,10 @@
+{
+    "frak08-b11.objy.com":
+    {
+        "config":"frak08.config"
+        },
+    "Henock-Abebes-MacBook-Pro.local":
+    {
+        "config":"habebe.macbook.config"
+        }
+    }
