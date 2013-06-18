@@ -22,7 +22,7 @@ plot_view = {
         ]
     }
 
-graph_size = pow(2,20)
+graph_size = pow(2,14)*80
 tx_size = pow(2,14)
 page_size = 14
 desc  =  "<p><b>Vertex Ingestion as a function of number of threads.</b></p>"
@@ -33,7 +33,7 @@ desc += "<p><strong>Page Size = %d</strong></p>"%(pow(2,page_size))
 cases = [
     {
         "name":"ingest",
-        "description":"Vertex Ingestion as a function of number of threads. (graph size=%d, page size=%d, transaction size=%d)"%(graph_size,pow(2,page_size),tx_size),
+        "description":"Vertex Ingestion as a function of number of threads. (transaction limit=%d, page size=%d, transaction size=%d)"%(10,pow(2,page_size),tx_size),
         "type":"vertex_ingest",
         "data":
         {
@@ -44,7 +44,8 @@ cases = [
             "use_index":[0,1],
             "new":1,
             "size":[graph_size],
-            "txsize":[tx_size]
+            "txsize":[tx_size],
+            "txlimit":[10]
             },
         "table_view":table_view,
         "plot_view":plot_view
