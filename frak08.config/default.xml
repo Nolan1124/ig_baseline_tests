@@ -3,41 +3,41 @@
   <Config name="default">
     <Lockserver address="frak08-b11.objy.com"/>
     <Host address="frak08-b11.objy.com">
-      <Disk location="/disk1/benchmark_data"/>
+      <Disk location="/disk1/benchmark_data_2"/>
     </Host>
   </Config>
   
    <Config name="disk.1">
      <Lockserver address="frak08-b11.objy.com"/>
       <Host address="frak08-b11.objy.com">
-       <Disk location="/disk1/benchmark_data"/>
+       <Disk location="/disk1/benchmark_data_2"/>
     </Host>
   </Config>
   
   <Config name="disk.2">
      <Lockserver address="frak08-b11.objy.com"/>
       <Host address="frak08-b11.objy.com">
-       <Disk location="/disk1/benchmark_data"/>
-       <Disk location="/disk2/benchmark_data"/>
+       <Disk location="/disk1/benchmark_data_2"/>
+       <Disk location="/disk2/benchmark_data_2"/>
     </Host>
   </Config>
 
   <Config name="disk.3">
      <Lockserver address="frak08-b11.objy.com"/>
       <Host address="frak08-b11.objy.com">
-       <Disk location="/disk1/benchmark_data"/>
-       <Disk location="/disk2/benchmark_data"/>
-       <Disk location="/disk3/benchmark_data"/>
+       <Disk location="/disk1/benchmark_data_2"/>
+       <Disk location="/disk2/benchmark_data_2"/>
+       <Disk location="/disk3/benchmark_data_2"/>
     </Host>
   </Config>
 
   <Config name="disk.4">
      <Lockserver address="frak08-b11.objy.com"/>
       <Host address="frak08-b11.objy.com">
-       <Disk location="/disk1/benchmark_data"/>
-       <Disk location="/disk2/benchmark_data"/>
-       <Disk location="/disk3/benchmark_data"/>
-       <Disk location="/disk4/benchmark_data"/>
+       <Disk location="/disk1/benchmark_data_2"/>
+       <Disk location="/disk2/benchmark_data_2"/>
+       <Disk location="/disk3/benchmark_data_2"/>
+       <Disk location="/disk4/benchmark_data_2"/>
     </Host>
   </Config>
   
