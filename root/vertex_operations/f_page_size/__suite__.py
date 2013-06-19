@@ -38,7 +38,8 @@ cases = [
             "use_index":[0,1],
             "new":1,
             "txsize":[txsize],
-            "size":[graph_size]
+            "size":[graph_size],
+            "ig_version":["ig.3.0"]
             },
         "table_view":table_view,
         "plot_view":plot_view
