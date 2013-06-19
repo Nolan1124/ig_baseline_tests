@@ -27,7 +27,7 @@ plot_view = {
 }
 
 
-graph_size = pow(2,18)*10
+graph_size = pow(2,18)*80
 cases = [
     {
         "name":"ingest",
@@ -43,7 +43,8 @@ cases = [
             "new":1,
             "size":[graph_size],
             "txsize":txsize,
-            "txlimit":[10]
+            "txlimit":[10],
+            "ig_version":["ig.3.0"]
             },
         
         "table_view":table_view,

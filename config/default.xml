@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConfigList>
-  <Config name="default">
-    <Lockserver address="127.0.0.1"/>
+
+
+
+  
+<Config name="default">
+<Lockserver address="127.0.0.1"/>
     <Host address="127.0.0.1">
       <Disk location="/Users/henocka/current/ig_baseline_tests/working/data"/>
     </Host>
