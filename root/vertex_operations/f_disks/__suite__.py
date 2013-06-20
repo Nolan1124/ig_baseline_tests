@@ -1,11 +1,11 @@
-name = "Threads"
-description = "Vertex Ingestion as a function of number of threads."
+name = "Disks"
+description = "Vertex Ingestion as a function of number of threads and disks."
 
 table_view = [
     [{"sTitle":"Database engine"},{"content":"object.engine()"}],
     [{"sTitle":"Graph Scale"},{"content":"'scale:%d'%(math.log(object.graph_size(),2))"}],
     [{"sTitle":"Threads"},{"content":"'T:%d'%(object.threads())"}],
-    [{"sTitle":"Config"},{"content":"'%d'%(object.config())"}],
+    [{"sTitle":"Config"},{"content":"'{0}'.format(object.config())"}],
     [{"sTitle":"Index Type"},{"content":"'index:%s'%(object.index_type())"}],
     [{"sTitle":"Rate (v/s)"},{"content":"'%.2f'%(object.rate_avg())"}],
     [{"sTitle":"Time (ms)"},{"content":"object.time_avg()"}],
@@ -24,7 +24,7 @@ plot_view = {
         ]
     }
 
-graph_size = pow(2,14)*10
+graph_size = pow(2,14)*200
 tx_size = pow(2,14)
 page_size = 14
 desc  =  "<p><b>Vertex Ingestion as a function of number of threads/disks.</b></p>"
@@ -47,7 +47,7 @@ cases = [
             "new":1,
             "size":[graph_size],
             "txsize":[tx_size],
-            "txlimit":[10],
+            "txlimit":[20],
             "ig_version":["ig.3.0"]
             },
         "table_view":table_view,
