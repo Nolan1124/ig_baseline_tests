@@ -24,7 +24,7 @@ plot_view = {
         ]
     }
 
-graph_size = pow(2,14)*200
+graph_size = pow(2,14)*400
 tx_size = pow(2,14)
 page_size = 14
 desc  =  "<p><b>Vertex Ingestion as a function of number of threads/disks.</b></p>"
@@ -42,12 +42,12 @@ cases = [
             "template":["basic"],
             "config":["local_disks:1","local_disks:2","local_disks:3","local_disks:4"],
             "page_size":[14],
-            "threads":[1,2,3,4,5],
+            "threads":[1,2,3,4,5,6,7,8,9,10],
             "use_index":[0,1],
             "new":1,
             "size":[graph_size],
             "txsize":[tx_size],
-            "txlimit":[20],
+            "txlimit":[40],
             "ig_version":["ig.3.0"]
             },
         "table_view":table_view,
