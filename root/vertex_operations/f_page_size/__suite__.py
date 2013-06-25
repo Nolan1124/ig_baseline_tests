@@ -22,10 +22,11 @@ plot_view = {
 
 txsize = pow(2,14)
 graph_size = pow(2,20)
-def MB(value):
-    return value*1000
-cases = [
-    {
+query_size = pow(2,17)
+cases = []
+page_sizes = [16,15,14,13,12,11,10]
+for page_size in page_sizes:
+    no_index_case = {
         "name":"ingest",
         "description":"Vertex Ingestion as a function of page size (transaction_size=%d graph_size=%d)."%(txsize,graph_size),
         "type":"vertex_ingest",
@@ -33,9 +34,9 @@ cases = [
         {
             "template":["basic"],
             "config":["default:default"],
-            "page_size":[16,15,14,13,12,11,10],
+            "page_size":[page_size],
             "threads":[1],
-            "use_index":[0,1],
+            "use_index":[0],
             "new":1,
             "txsize":[txsize],
             "size":[graph_size],
@@ -44,5 +45,48 @@ cases = [
         "table_view":table_view,
         "plot_view":plot_view
         }
-    ]
+    cases.append(no_index_case)
+    pass
 
+for page_size in page_sizes:
+    index_case = {
+        "name":"ingest",
+        "description":"Vertex Ingestion as a function of page size (transaction_size=%d graph_size=%d)."%(txsize,graph_size),
+        "type":"vertex_ingest",
+        "data":
+        {
+            "template":["basic"],
+            "config":["default:default"],
+            "page_size":[page_size],
+            "threads":[1],
+            "use_index":[1],
+            "new":1,
+            "txsize":[txsize],
+            "size":[graph_size],
+            "ig_version":["ig.3.0"]
+            },
+        "table_view":table_view,
+        "plot_view":plot_view
+        }
+    query_case = {
+        "name":"query",
+        "description":"Vertex Query as a function of page size (transaction_size=%d graph_size=%d)."%(txsize,graph_size),
+        "type":"query",
+        "data":
+        {
+            "template":["basic"],
+            "vertex":["Node"],
+            "config":["default:default"],
+            "page_size":[page_size],
+            "threads":[1],
+            "txsize":[txsize],
+            "size":[query_size],
+            "graph_size":[graph_size],
+            "ig_version":["ig.3.0"]
+            },
+        "table_view":table_view,
+        "plot_view":plot_view
+        }   
+    cases.append(index_case)
+    cases.append(query_case)
+    
