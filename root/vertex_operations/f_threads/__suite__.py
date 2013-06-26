@@ -49,7 +49,7 @@ for thread in threads:
         "table_view":table_view,
         "plot_view":plot_view
         }
-    #cases.append(no_index_case)
+    cases.append(no_index_case)
     pass
 
 index_case = {
