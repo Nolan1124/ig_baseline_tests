@@ -7,18 +7,18 @@ for i in xrange(8,19):
     pass
 
 table_view = [
+    [{"sTitle":"Platform"},{"content":"object.platform()"}],
     [{"sTitle":"Version"},{"content":"object.engine()"}],
     [{"sTitle":"Transaction Size"},{"content":"object.tx_size()"}],
     [{"sTitle":"Index Type"},{"content":"'index:%s'%(object.index_type())"}],
     [{"sTitle":"Rate (v/s)"},{"content":"'%.2f'%(object.rate_avg())"}],
-    [{"sTitle":"Time (ms)"},{"content":"object.time_avg()"}],
-    [{"sTitle":"Heap Memory (MB)"},{"content":"'%.3f'%(object.memory_used_avg()*1e-6)"}],
+    [{"sTitle":"Time (ms)"},{"content":"object.time_avg()"}]
     ]
 
 plot_view = {
     "plot":[
         {"name":"rate","data":("object.rate_avg()","math.log(object.tx_size(),2)"),"xaxis":"pow(2,Transaction size)"},
-        {"name":"memory","data":("object.memory_used_avg()*1e-6","math.log(object.tx_size(),2)"),"xaxis":"pow(2,Transaction size)"},
+        {"name":"time","data":("object.time_avg()*0.001","math.log(object.tx_size(),2)"),"xaxis":"pow(2,Transaction size)"},
         ],
     "ivar":[
         {"name":"Platform","id":"object.platform_id()","content":"object.platform()"},
