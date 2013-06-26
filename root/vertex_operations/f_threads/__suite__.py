@@ -1,14 +1,13 @@
 name = "Threads"
-description = "Vertex Ingestion as a function of number of threads."
+description = "Vertex Query as a function of number of threads."
 
 table_view = [
     [{"sTitle":"Database engine"},{"content":"object.engine()"}],
-    [{"sTitle":"Graph Scale"},{"content":"'scale:%d'%(math.log(object.graph_size(),2))"}],
+    [{"sTitle":"Platform"},{"content":"object.platform()"}],
     [{"sTitle":"Threads"},{"content":"'T:%d'%(object.threads())"}],
     [{"sTitle":"Index Type"},{"content":"'index:%s'%(object.index_type())"}],
     [{"sTitle":"Rate (v/s)"},{"content":"'%.2f'%(object.rate_avg())"}],
-    [{"sTitle":"Time (ms)"},{"content":"object.time_avg()"}],
-    [{"sTitle":"Heap Memory (MB)"},{"content":"'%.3f'%(object.memory_used_avg()*1e-6)"}],
+    [{"sTitle":"Time (ms)"},{"content":"object.time_avg()"}]
     ]
 
 plot_view = {
@@ -29,29 +28,6 @@ page_size = 14
 cases = []
 threads = [1,2,3,4,5,6,7,8]
 
-for thread in threads:
-    no_index_case = {
-        "name":"ingest",
-        "description":"Vertex Ingestion as a function of number of threads. (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
-        "type":"vertex_ingest",
-        "data":
-        {
-            "template":["basic"],
-            "config":["default:default"],
-            "page_size":[14],
-            "threads":[thread],
-            "use_index":[0],
-            "new":1,
-            "size":[graph_size],
-            "txsize":[tx_size],
-            "ig_version":["ig.3.0"]
-            },
-        "table_view":table_view,
-        "plot_view":plot_view
-        }
-    cases.append(no_index_case)
-    pass
-
 index_case = {
     "name":"ingest",
     "description":"Vertex Ingestion as a function of number of threads. (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
@@ -66,7 +42,7 @@ index_case = {
         "new":1,
         "txsize":[tx_size],
         "size":[graph_size],
-        "ig_version":["ig.3.0"]
+        "ig_version":["ig.3.0","ig.3.1"]
         },
     "table_view":table_view,
     "plot_view":plot_view
@@ -88,7 +64,7 @@ for thread in threads:
             "txsize":[tx_size],
             "size":[query_size],
             "graph_size":[graph_size],
-            "ig_version":["ig.3.0"]
+            "ig_version":["ig.3.0","ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view
@@ -96,27 +72,4 @@ for thread in threads:
     cases.append(query_case)
     pass
 
-threads = threads[1:]
-for thread in threads:
-    index_case = {
-        "name":"ingest",
-        "description":"Vertex Ingestion as a function of number of threads. (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
-        "type":"vertex_ingest",
-        "data":
-        {
-            "template":["basic"],
-            "config":["default:default"],
-            "page_size":[14],
-            "threads":[thread],
-            "use_index":[1],
-            "new":1,
-            "txsize":[tx_size],
-            "size":[graph_size],
-            "ig_version":["ig.3.0"]
-            },
-        "table_view":table_view,
-        "plot_view":plot_view
-        }
-    cases.append(index_case)
-    
     
