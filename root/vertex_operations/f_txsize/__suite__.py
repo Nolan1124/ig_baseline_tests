@@ -7,8 +7,8 @@ for i in xrange(8,19):
     pass
 
 table_view = [
-    [{"sTitle":"Database engine"},{"content":"object.engine()"}],
-    [{"sTitle":"Graph Scale"},{"content":"'scale:%d'%(math.log(object.graph_size(),2))"}],
+    [{"sTitle":"Version"},{"content":"object.engine()"}],
+    [{"sTitle":"Transaction Size"},{"content":"object.tx_size()"}],
     [{"sTitle":"Index Type"},{"content":"'index:%s'%(object.index_type())"}],
     [{"sTitle":"Rate (v/s)"},{"content":"'%.2f'%(object.rate_avg())"}],
     [{"sTitle":"Time (ms)"},{"content":"object.time_avg()"}],
@@ -46,7 +46,7 @@ for tx_size in tx_sizes:
             "new":1,
             "size":[graph_size],
             "txsize":[tx_size],
-            "ig_version":["ig.3.0"]
+            "ig_version":["ig.3.1"]
             },
         
         "table_view":table_view,
@@ -70,7 +70,7 @@ for tx_size in tx_sizes:
             "new":1,
             "txsize":[tx_size],
             "size":[graph_size],
-            "ig_version":["ig.3.0"]
+            "ig_version":["ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view
