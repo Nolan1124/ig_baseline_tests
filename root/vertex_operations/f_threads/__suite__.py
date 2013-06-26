@@ -3,9 +3,9 @@ description = "Vertex Query as a function of number of threads."
 
 table_view = [
     [{"sTitle":"Database engine"},{"content":"object.engine()"}],
+    [{"sTitle":"Version"},{"content":"object.engine()"}],
     [{"sTitle":"Platform"},{"content":"object.platform()"}],
     [{"sTitle":"Threads"},{"content":"'T:%d'%(object.threads())"}],
-    [{"sTitle":"Index Type"},{"content":"'index:%s'%(object.index_type())"}],
     [{"sTitle":"Rate (v/s)"},{"content":"'%.2f'%(object.rate_avg())"}],
     [{"sTitle":"Time (ms)"},{"content":"object.time_avg()"}]
     ]
@@ -17,7 +17,7 @@ plot_view = {
         ],
     "ivar":[
         {"name":"Platform","id":"object.platform_id()","content":"object.platform()"},
-        {"name":"Index Type","id":"object.index_type_id()","content":"object.index_type()"},
+        {"name":"Version","id":"object.engine_id()","content":"object.engine()"},
         ]
     }
 
