@@ -3,6 +3,7 @@
 
 <EngineList>
 <Engine version="ig.3.0" home="/disk1/InfiniteGraph/3.0/"/>
+<Engine version="ig.3.1" home="/disk1/InfiniteGraph/3.1/"/>
 </EngineList>
    <Config name="1">
      <Lockserver address="frak08-b11.objy.com"/>
