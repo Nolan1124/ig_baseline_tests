@@ -21,8 +21,8 @@ plot_view = {
         ]
     }
 
-graph_size = pow(2,18)*40
-query_size = pow(2,18)
+graph_size = pow(2,14)*80
+query_size = pow(2,14)*80
 tx_size = pow(2,14)
 page_size = 14
 cases = []
@@ -62,6 +62,7 @@ for thread in threads:
             "page_size":[14],
             "threads":[thread],
             "txsize":[tx_size],
+            "txlimit":[10],
             "size":[query_size],
             "graph_size":[graph_size],
             "ig_version":["ig.3.0","ig.3.1"]
