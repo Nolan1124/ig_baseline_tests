@@ -2,7 +2,7 @@ benchmark_web_report
 working
 
 *.py[cod]
-
+*~
 # C extensions
 *.so
 

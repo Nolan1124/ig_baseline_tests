@@ -21,6 +21,7 @@ plot_view = {
         {"name":"Platform","id":"object.platform_id()","content":"object.platform()"},
         {"name":"Index Type","id":"object.index_type_id()","content":"object.index_type()"},
         {"name":"Index Type","id":"object.config_id()","content":"object.config()"},
+        {"name":"Version","id":"object.engine_id()","content":"object.engine()"},
         ]
     }
 
@@ -48,7 +49,7 @@ cases = [
             "size":[graph_size],
             "txsize":[tx_size],
             "txlimit":[40],
-            "ig_version":["ig.3.0"]
+            "ig_version":["ig.3.0","ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view
