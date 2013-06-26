@@ -83,7 +83,7 @@ for page_size in page_sizes:
             "txsize":[txsize],
             "size":[query_size],
             "graph_size":[graph_size],
-            "ig_version":["ig.3.0","ig.3,1"]
+            "ig_version":["ig.3.0","ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view
