@@ -17,6 +17,7 @@ plot_view = {
     "ivar":[
         {"name":"Platform","id":"object.platform_id()","content":"object.platform()"},
         {"name":"Index Type","id":"object.index_type_id()","content":"object.index_type()"},
+        {"name":"Version","id":"object.engine_id()","content":"object.engine()"},
         ]
     }
 
@@ -40,7 +41,7 @@ for page_size in page_sizes:
             "new":1,
             "txsize":[txsize],
             "size":[graph_size],
-            "ig_version":["ig.3.0"]
+            "ig_version":["ig.3.0","ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view
@@ -63,7 +64,7 @@ for page_size in page_sizes:
             "new":1,
             "txsize":[txsize],
             "size":[graph_size],
-            "ig_version":["ig.3.0"]
+            "ig_version":["ig.3.0","ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view
@@ -82,7 +83,7 @@ for page_size in page_sizes:
             "txsize":[txsize],
             "size":[query_size],
             "graph_size":[graph_size],
-            "ig_version":["ig.3.0"]
+            "ig_version":["ig.3.0","ig.3,1"]
             },
         "table_view":table_view,
         "plot_view":plot_view

@@ -3,6 +3,7 @@
 
 	<EngineList>
 		<Engine version="ig.3.0" home="/Applications/InfiniteGraph/3.0"/>
+		<Engine version="ig.3.1" home="/Applications/InfiniteGraph/3.1"/>
 	</EngineList>
 
   	<Config name="default">
