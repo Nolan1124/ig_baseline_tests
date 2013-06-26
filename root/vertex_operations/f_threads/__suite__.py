@@ -2,7 +2,6 @@ name = "Threads"
 description = "Vertex Query as a function of number of threads."
 
 table_view = [
-    [{"sTitle":"Database engine"},{"content":"object.engine()"}],
     [{"sTitle":"Version"},{"content":"object.engine()"}],
     [{"sTitle":"Platform"},{"content":"object.platform()"}],
     [{"sTitle":"Threads"},{"content":"'T:%d'%(object.threads())"}],
