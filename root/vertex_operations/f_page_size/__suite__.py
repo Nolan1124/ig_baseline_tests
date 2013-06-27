@@ -2,11 +2,11 @@ name = "Page size"
 description = "Vertex Ingestion as a function of page size."
 
 table_view = [
-    [{"sTitle":"Database engine"},{"content":"object.engine()"}],
+    [{"sTitle":"Platform"},{"content":"object.platform()"}],
+    [{"sTitle":"Version"},{"content":"object.engine()"}],
     [{"sTitle":"Page size"},{"content":"object.page_size()"}],
     [{"sTitle":"Index Type"},{"content":"'index:%s'%(object.index_type())"}],
-    [{"sTitle":"Rate (v/s)"},{"content":"'%.2f'%(object.rate_avg())"}],
-    [{"sTitle":"Heap Memory (MB)"},{"content":"'%.3f'%(object.memory_used_avg()*1e-6)"}],
+    [{"sTitle":"Rate (v/s)"},{"content":"'%.2f'%(object.rate_avg())"}]
     ]
 
 plot_view = {
