@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConfigList>
   <EngineList>
-    <Engine version="ig.3.0" home="/data/InfiniteGraph/3.1/"/>
-    <Engine version="ig.3.1" home="/data/InfiniteGraph/3.1/"/>
+    <Engine version="ig.3.0" home="/data/InfiniteGraph/3.0/" model="InfiniteGraph"/>
+    <Engine version="ig.3.1" home="/data/InfiniteGraph/3.1/" model="IG"/>
   </EngineList>
   <Config name="default">
     <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
