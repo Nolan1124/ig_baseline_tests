@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigList>
+
+<EngineList>
+<Engine version="ig.3.0" home="/data/InfiniteGraph/3.1/"/>
+<Engine version="ig.3.1" home="/data/InfiniteGraph/3.1/"/>
+</EngineList>
+   <Config name="1">
+     <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+      <Host address="dev-analysis-nosql-01.vega.ironport.com">
+       <Disk location="/data/benchmark"/>
+    </Host>
+  </Config>
+  
+  <Config name="2">
+     <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+      <Host address="dev-analysis-nosql-01.vega.ironport.com">
+       <Disk location="/data/benchmark"/>
+       <Disk location="/data2/benchmark"/>
+    </Host>
+  </Config>
+
+  <Config name="3">
+     <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+      <Host address="dev-analysis-nosql-01.vega.ironport.com">
+       <Disk location="/data/benchmark"/>
+       <Disk location="/data2/benchmark"/>
+       <Disk location="/data3/benchmark"/>
+    </Host>
+  </Config>
+
+  <Config name="4">
+     <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+      <Host address="dev-analysis-nosql-01.vega.ironport.com">
+       <Disk location="/data/benchmark"/>
+       <Disk location="/data2/benchmark"/>
+       <Disk location="/data3/benchmark"/>
+       <Disk location="/data4/benchmark"/>
+    </Host>
+  </Config>
+  
+    <Config name="5">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+      </Host>
+  </Config>
+  
+    <Config name="6">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+         <Disk location="/data6/benchmark"/>
+      </Host>
+  </Config>
+  
+    <Config name="7">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+         <Disk location="/data6/benchmark"/>
+         <Disk location="/data7/benchmark"/>
+      </Host>
+  </Config>
+  
+    <Config name="8">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+         <Disk location="/data6/benchmark"/>
+         <Disk location="/data7/benchmark"/>
+         <Disk location="/data8/benchmark"/>
+      </Host>
+  </Config>
+  
+    <Config name="9">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+         <Disk location="/data6/benchmark"/>
+         <Disk location="/data7/benchmark"/>
+         <Disk location="/data8/benchmark"/>
+         <Disk location="/data9/benchmark"/>
+      </Host>
+  </Config>
+  
+    <Config name="10">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+         <Disk location="/data6/benchmark"/>
+         <Disk location="/data7/benchmark"/>
+         <Disk location="/data8/benchmark"/>
+         <Disk location="/data9/benchmark"/>
+         <Disk location="/data10/benchmark"/>
+      </Host>
+  </Config>
+  
+    <Config name="11">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+         <Disk location="/data6/benchmark"/>
+         <Disk location="/data7/benchmark"/>
+         <Disk location="/data8/benchmark"/>
+         <Disk location="/data9/benchmark"/>
+         <Disk location="/data10/benchmark"/>
+         <Disk location="/data11/benchmark"/>
+      </Host>
+  </Config>
+  
+    <Config name="12">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+         <Disk location="/data6/benchmark"/>
+         <Disk location="/data7/benchmark"/>
+         <Disk location="/data8/benchmark"/>
+         <Disk location="/data9/benchmark"/>
+         <Disk location="/data10/benchmark"/>
+         <Disk location="/data11/benchmark"/>
+         <Disk location="/data12/benchmark"/>
+      </Host>
+  </Config>
+  
+    <Config name="13">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+         <Disk location="/data6/benchmark"/>
+         <Disk location="/data7/benchmark"/>
+         <Disk location="/data8/benchmark"/>
+         <Disk location="/data9/benchmark"/>
+         <Disk location="/data10/benchmark"/>
+         <Disk location="/data11/benchmark"/>
+         <Disk location="/data12/benchmark"/>
+         <Disk location="/data13/benchmark"/>
+      </Host>
+  </Config>
+  
+    <Config name="14">
+       <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+        <Host address="dev-analysis-nosql-01.vega.ironport.com">
+         <Disk location="/data/benchmark"/>
+         <Disk location="/data2/benchmark"/>
+         <Disk location="/data3/benchmark"/>
+         <Disk location="/data4/benchmark"/>
+         <Disk location="/data5/benchmark"/>
+         <Disk location="/data6/benchmark"/>
+         <Disk location="/data7/benchmark"/>
+         <Disk location="/data8/benchmark"/>
+         <Disk location="/data9/benchmark"/>
+         <Disk location="/data10/benchmark"/>
+         <Disk location="/data11/benchmark"/>
+         <Disk location="/data12/benchmark"/>
+         <Disk location="/data13/benchmark"/>
+         <Disk location="/data14/benchmark"/>
+      </Host>
+  </Config>
+  
+</ConfigList>
