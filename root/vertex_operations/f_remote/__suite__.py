@@ -36,7 +36,10 @@ cases = [
         "data":
         {
             "template":["basic"],
-            "config":["local_disks:1","local_disks:2","local_disks:3","local_disks:4"],
+            "config":["remote:local.lockserver.disk.1",
+                      "remote:local.lockserver.disk.2",
+                      "remote:remote.lockserver.disk.1",
+                      "remote:remote.lockserver.disk.2"]
             "page_size":page_size,
             "threads":[1,2,3],
             "use_index":[0,1],
