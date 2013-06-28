@@ -5,5 +5,6 @@ suites = [
     "f_txsize",
     "f_page_size",
     "f_threads",
-    "f_disks"
+    "f_disks",
+    "f_remote"
     ]

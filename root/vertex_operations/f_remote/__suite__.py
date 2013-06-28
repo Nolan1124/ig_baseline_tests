@@ -21,6 +21,7 @@ plot_view = {
         {"name":"Index Type","id":"object.index_type_id()","content":"object.index_type()"},
         {"name":"Config","id":"object.config_id()","content":"object.config()"},
         {"name":"Version","id":"object.engine_id()","content":"object.engine()"},
+        {"name":"Page Size","id":"object.page_size()","content":"object.page_size()"},
         ]
     }
 
