@@ -9,14 +9,14 @@
 
    <Config name="local_lockserver.disk.1">
      <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
-      <Host address="dev-analysis-nosql-01.vega.ironport.com"/>
+      <Host address="dev-analysis-nosql-01.vega.ironport.com">
        <Disk location="/data/benchmark"/>
     </Host>
   </Config>
 
   <Config name="remote_lockserver.disk.1">
      <Lockserver address="dev-analysis-nosql-02.vega.ironport.com"/>
-      <Host address="dev-analysis-nosql-01.vega.ironport.com"/>
+      <Host address="dev-analysis-nosql-01.vega.ironport.com">
        <Disk location="/data/benchmark"/>
     </Host>
   </Config>
