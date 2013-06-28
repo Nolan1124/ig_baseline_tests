@@ -47,7 +47,7 @@ cases = [
             "new":1,
             "size":[graph_size],
             "txsize":[tx_size],
-            "txlimit":-1,
+            "txlimit":[-1],
             "ig_version":["ig.3.1"]
             },
         "table_view":table_view,
