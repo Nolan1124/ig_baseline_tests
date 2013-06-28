@@ -24,7 +24,7 @@ plot_view = {
         ]
     }
 
-graph_size = pow(2,14)
+graph_size = pow(2,21)
 tx_size = pow(2,14)
 page_size = [12,14,16]
 
@@ -36,18 +36,19 @@ cases = [
         "data":
         {
             "template":["basic"],
-            "config":["remote:local.lockserver.disk.1",
-                      "remote:local.lockserver.disk.2",
-                      "remote:remote.lockserver.disk.1",
-                      "remote:remote.lockserver.disk.2"]
+            "config":["remote_host:local_lockserver.disk.1",
+                      "remote_host:remote_lockserver.disk.1",
+                      "local_host:local_lockserver.disk.1",
+                      "local_host:remote_lockserver.disk.1",
+                      ],
             "page_size":page_size,
-            "threads":[1,2,3],
-            "use_index":[0,1],
+            "threads":[1,2,4,8,16],
+            "use_index":[0],
             "new":1,
             "size":[graph_size],
             "txsize":[tx_size],
-            "txlimit":[40],
-            "ig_version":["ig.3.0","ig.3.1"]
+            "txlimit":-1,
+            "ig_version":["ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view

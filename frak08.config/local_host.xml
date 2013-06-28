@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigList>
+
+
+<EngineList>
+ <Engine version="ig.3.0" home="/disk1/InfiniteGraph/3.0/" model="InfiniteGraph"/>
+ <Engine version="ig.3.1" home="/disk1/InfiniteGraph/3.1/" model="IG"/>
+</EngineList>
+
+   <Config name="local_lockserver.disk.1">
+     <Lockserver address="frak08-b11.objy.com"/>
+      <Host address="frak08-b11.objy.com">
+       <Disk location="/disk1/benchmark_data_2"/>
+    </Host>
+  </Config>
+
+  <Config name="remote_lockserver.disk.1">
+     <Lockserver address="frak07-b09.objy.com"/>
+      <Host address="frak08-b11.objy.com">
+       <Disk location="/disk1/benchmark_data_2"/>
+    </Host>
+  </Config>
+  
+</ConfigList>
