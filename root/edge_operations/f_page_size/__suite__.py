@@ -22,7 +22,7 @@ plot_view = {
     }
 
 txsize = pow(2,14)
-graph_size = pow(2,20)
+graph_size = pow(2,17)
 page_sizes = [16,15,14,13,12,11,10]
 cases = [
     {
@@ -39,7 +39,7 @@ cases = [
             "new":1,
             "txsize":[txsize],
             "size":[graph_size],
-            "ig_version":["ig.3.0","ig.3.1"]
+            "ig_version":["ig.3.1","ig.3.0"]
             },
         "table_view":table_view,
         "plot_view":plot_view
