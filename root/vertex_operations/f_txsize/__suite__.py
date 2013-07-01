@@ -26,34 +26,32 @@ plot_view = {
         ]
 }
 
-
 graph_size = pow(2,18)*10
 query_size = pow(2,17)
 cases = []
 
-for tx_size in tx_sizes:
-    no_index_case = {
-        "name":"ingest",
-        "description":"Vertex Ingestion as a function of transaction size (page_size=%d)."%(pow(2,14)),
-        "type":"vertex_ingest",
-        "data":
-        {
-            "template":["basic"],
-            "config":["default:default"],
-            "page_size":[14],
-            "threads":[1],
-            "use_index":[0],
-            "new":1,
-            "size":[graph_size],
-            "txsize":[tx_size],
-            "ig_version":["ig.3.0","ig.3.1"]
-            },
-        
-        "table_view":table_view,
-        "plot_view":plot_view
-        }
-    cases.append(no_index_case)
-    pass
+cases = [
+    {
+    "name":"ingest",
+    "description":"Vertex Ingestion as a function of transaction size (page_size=%d)."%(pow(2,14)),
+    "type":"vertex_ingest",
+    "data":
+    {
+    "template":["basic"],
+    "config":["default:default"],
+    "page_size":[14],
+    "threads":[1],
+    "use_index":[0],
+    "new":1,
+    "size":[graph_size],
+    "txsize":tx_sizes,
+    "ig_version":["ig.3.0","ig.3.1"]
+    },
+    "table_view":table_view,
+    "plot_view":plot_view
+    }
+    ]
+
 
 for tx_size in tx_sizes:
     index_case = {
