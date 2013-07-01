@@ -2,7 +2,7 @@ name = "Transaction Size (Edge)"
 description = "Edge Ingestion as a function of transaction size."
 
 tx_sizes = []
-for i in xrange(8,17):
+for i in xrange(10,17):
     tx_sizes.append(pow(2,i))
     pass
 
