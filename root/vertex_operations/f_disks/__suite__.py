@@ -1,54 +1,51 @@
 name = "Disks"
-description = "Vertex Ingestion as a function of number of threads and disks."
+description = "Vertex Ingestion as a function of number of threads/processes and disks."
 
 table_view = [
     [{"sTitle":"Database engine"},{"content":"object.engine()"}],
-    [{"sTitle":"Graph Scale"},{"content":"'scale:%d'%(math.log(object.graph_size(),2))"}],
-    [{"sTitle":"Threads"},{"content":"'T:%d'%(object.threads())"}],
+    [{"sTitle":"Graph Size"},{"content":"object.graph_size()"}],
+    [{"sTitle":"Threads"},{"content":"object.threads()"}],
+    [{"sTitle":"Processes"},{"content":"object.processes()"}],
     [{"sTitle":"Config"},{"content":"'{0}'.format(object.config())"}],
     [{"sTitle":"Index Type"},{"content":"'index:%s'%(object.index_type())"}],
     [{"sTitle":"Rate (v/s)"},{"content":"'%.2f'%(object.rate_avg())"}],
     [{"sTitle":"Time (ms)"},{"content":"object.time_avg()"}],
-    [{"sTitle":"Heap Memory (MB)"},{"content":"'%.3f'%(object.memory_used_avg()*1e-6)"}],
     ]
 
 plot_view = {
     "plot":[
         {"name":"rate","data":("object.rate_avg()","object.threads()"),"xaxis":"Threads"},
-        {"name":"memory","data":("object.memory_used_avg()*1e-6","object.threads()"),"xaxis":"Threads"},
+        {"name":"time","data":("object.time_avg()","object.threads()"),"xaxis":"Threads"},
         ],
     "ivar":[
         {"name":"Platform","id":"object.platform_id()","content":"object.platform()"},
         {"name":"Index Type","id":"object.index_type_id()","content":"object.index_type()"},
         {"name":"Index Type","id":"object.config_id()","content":"object.config()"},
         {"name":"Version","id":"object.engine_id()","content":"object.engine()"},
+        {"name":"Processes","id":"object.processes()","content":"object.processes()"},
         ]
     }
 
-graph_size = pow(2,14)*400
+graph_size = pow(2,22)
 tx_size = pow(2,14)
 page_size = 14
-desc  =  "<p><b>Vertex Ingestion as a function of number of threads/disks.</b></p>"
-desc += "<p><strong>Graph Size = %d</strong></p>"%(graph_size)
-desc += "<p><strong>Transaction Size = %d</strong></p>"%(tx_size)
-desc += "<p><strong>Page Size = %d</strong></p>"%(pow(2,page_size))
 
 cases = [
     {
         "name":"ingest",
-        "description":"Vertex Ingestion as a function of number of threads and disks. (transaction limit=%d, page size=%d, transaction size=%d)"%(10,pow(2,page_size),tx_size),
+        "description":"Vertex Ingestion as a function of number of threads/processes and disks. (transaction limit=%d, page size=%d, transaction size=%d)"%(10,pow(2,page_size),tx_size),
         "type":"vertex_ingest",
         "data":
         {
-            "template":["basic"],
+            "template":["basic_non_unique"],
             "config":["local_disks:1","local_disks:2","local_disks:3","local_disks:4"],
             "page_size":[14],
-            "threads":[1,2,3,4,5,6,7,8,9,10],
+            "threads":[1,2,4],
+            "processes":[(None,1),(None,2),(None,3),(None,4)]
             "use_index":[0,1],
             "new":1,
             "size":[graph_size],
             "txsize":[tx_size],
-            "txlimit":[40],
             "ig_version":["ig.3.0","ig.3.1"]
             },
         "table_view":table_view,
