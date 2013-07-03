@@ -62,7 +62,7 @@ for thread in threads:
             "page_size":[14],
             "threads":[thread],
             "txsize":[tx_size],
-            "txlimit":[10],
+            "use_index":[1],
             "size":[query_size],
             "graph_size":[graph_size],
             "ig_version":["ig.3.0","ig.3.1"]
