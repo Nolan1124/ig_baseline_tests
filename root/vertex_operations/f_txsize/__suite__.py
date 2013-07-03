@@ -5,7 +5,7 @@ tx_sizes = []
 for i in xrange(8,19):
     tx_sizes.append(pow(2,i))
     pass
-
+tx_sizes.reverse()
 table_view = [
     [{"sTitle":"Platform"},{"content":"object.platform()"}],
     [{"sTitle":"Version"},{"content":"object.engine()"}],
