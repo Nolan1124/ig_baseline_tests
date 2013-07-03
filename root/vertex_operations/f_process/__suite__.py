@@ -22,61 +22,59 @@ plot_view = {
     }
 
 graph_size = pow(2,18)
-query_size = pow(2,12)
-tx_size = pow(2,15)
+query_size = pow(2,15)
+tx_size = pow(2,14)
 page_size = 14
 cases = []
-processes = [(None,1),(None,2),(None,3),(None,4),(None,5)]
+processes = [(None,1),(None,2),(None,3),(None,4),(None,5),(None,6),(None,7)]
 
-     
-for process in processes:
-    cases.append(
-        {
-            "name":"ingest",
-            "description":"Vertex Ingestion as a function of number of threads. (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
-            "type":"vertex_ingest",
-                "data":
-            {
-                "template":["basic_non_unique"],
-                "config":["default:default"],
-                "page_size":[14],
-                "threads":[1],
-                "use_index":[1],
-                "new":1,
-                "txsize":[tx_size],
-                "size":[graph_size],
-                "ig_version":["ig.3.1","ig.3.0"],
-                "process":[process],
-                },
-            "table_view":table_view,
-            "plot_view":plot_view
-            }
-        )
-    cases.append(
-        {
-            "name":"query",
-            "description":"Vertex Query as a function of number of processes. (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
-            "type":"query",
-            "data":
-            {
-                "template":["basic_non_unique"],
-                "vertex":["Node"],
-                "config":["default:default"],
-                "page_size":[14],
-                "threads":[1],
-                "use_index":[1],
-                "txsize":[tx_size],
-                "size":[query_size],
-                "graph_size":[graph_size],
-                "ig_version":["ig.3.1","ig.3.0"],
-                "process":[process],
-                },
-            "table_view":table_view,
-            "plot_view":plot_view
-            }
-        )
-    pass
-    
+cases.append(
+    {
+    "name":"ingest",
+    "description":"Vertex Ingestion as a function of number of threads. (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
+    "type":"vertex_ingest",
+    "data":
+    {
+    "template":["basic_non_unique"],
+    "config":["default:default"],
+    "page_size":[14],
+    "threads":[1],
+    "use_index":[1],
+    "new":1,
+    "txsize":[tx_size],
+    "size":[graph_size],
+    "ig_version":["ig.3.1","ig.3.0"],
+    "process":[processes[0]],
+    },
+    "table_view":table_view,
+    "plot_view":plot_view
+    }
+    )
+
+cases.append(
+    {
+    "name":"query",
+    "description":"Vertex Query as a function of number of processes. (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
+    "type":"query",
+    "data":
+    {
+    "template":["basic_non_unique"],
+    "vertex":["Node"],
+    "config":["default:default"],
+    "page_size":[14],
+    "threads":[1],
+    "use_index":[1],
+    "txsize":[tx_size],
+    "size":[query_size],
+    "graph_size":[graph_size],
+    "ig_version":["ig.3.1","ig.3.0"],
+    "process":processes,
+    },
+    "table_view":table_view,
+    "plot_view":plot_view
+    }
+    )
+
 cases.append(
     {
         "name":"ingest",
@@ -88,7 +86,7 @@ cases.append(
             "config":["default:default"],
             "page_size":[14],
             "threads":[1],
-            "use_index":[0],
+            "use_index":[0,1],
             "new":1,
             "txsize":[tx_size],
             "size":[graph_size],
