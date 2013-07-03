@@ -41,7 +41,7 @@ cases = [
             "config":["local_disks:1","local_disks:2","local_disks:3","local_disks:4"],
             "page_size":[14],
             "threads":[1,2,4],
-            "processes":[(None,1),(None,2),(None,3),(None,4)]
+            "processes":[(None,1),(None,2),(None,3),(None,4)],
             "use_index":[0,1],
             "new":1,
             "size":[graph_size],
