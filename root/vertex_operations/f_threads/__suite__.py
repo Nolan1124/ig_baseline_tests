@@ -17,6 +17,7 @@ plot_view = {
     "ivar":[
         {"name":"Platform","id":"object.platform_id()","content":"object.platform()"},
         {"name":"Version","id":"object.engine_id()","content":"object.engine()"},
+        {"name":"Index","id":"object.index_type_id()","content":"object.index_type()"},
         ]
     }
 
