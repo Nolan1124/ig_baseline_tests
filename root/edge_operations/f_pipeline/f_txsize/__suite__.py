@@ -1,5 +1,5 @@
-name = "Transaction Size (Edge)"
-description = "Edge Ingestion as a function of transaction size."
+name = "Transaction Size (Pipeline Ingest)"
+description = "Pipeline Edge Ingestion as a function of transaction size."
 
 tx_sizes = []
 for i in xrange(10,17):
