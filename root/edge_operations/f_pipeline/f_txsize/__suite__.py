@@ -30,7 +30,7 @@ cases = [
     {
     "name":"ingest",
     "description":"Edge Ingestion as a function of transaction size (page_size=%d)."%(pow(2,14)),
-    "type":"pipline_edge_ingest",
+    "type":"pipeline_edge_ingest",
     "data":
     {
     "template":["basic"],
