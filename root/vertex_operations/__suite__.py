@@ -7,5 +7,6 @@ suites = [
     "f_threads",
     "f_disks",
     "f_remote",
-    "f_process"
+    "f_process",
+    "f_dist"
     ]
