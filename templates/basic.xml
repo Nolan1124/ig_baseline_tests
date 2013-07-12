@@ -14,9 +14,9 @@
     </Vertex>
     
     <Edge name="Relationship">
-      <Data scale="2">
+      <Data>
         <Connections>
-          <Connection type="1" weight="0">
+          <Connection type="1" weight="Integer.uniform(start=0,end=20)" scale="3.1">
             <Origin name="Node" selection="sequence(repeat=True)" fieldIndex="0"/>
             <Target name="Node" selection="uniform()" fieldIndex="0"/>
           </Connection>
