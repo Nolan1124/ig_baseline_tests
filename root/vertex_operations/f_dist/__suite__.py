@@ -18,6 +18,7 @@ plot_view = {
         {"name":"Platform","id":"object.platform_id()","content":"object.platform()"},
         {"name":"Version","id":"object.engine_id()","content":"object.engine()"},
         {"name":"Index Type","id":"object.index_type_id()","content":"object.index_type()"},
+        {"name":"Process Setup","id":"object.process_description_id()","content":"object.process_description()"},
         ]
     }
 
@@ -26,7 +27,16 @@ query_size = pow(2,15)
 tx_size = pow(2,14)
 page_size = 14
 cases = []
-processes = [([0],1),([0,1],1)]
+processes = []
+num_proc = 3
+#single machine setup
+for i in xrange(num_proc):
+    processes.append(([0],i))
+    pass
+#two machine setup
+for i in xrange(num_proc):
+    processes.append(([0,1],i))
+    pass
 
 cases.append(
     {
@@ -43,7 +53,7 @@ cases.append(
     "new":1,
     "txsize":[tx_size],
     "size":[graph_size],
-    "ig_version":["ig.3.1","ig.3.0"],
+    "ig_version":["ig.3.1"],
     "process":processes,
     },
     "table_view":table_view,
