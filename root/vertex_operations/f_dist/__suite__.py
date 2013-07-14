@@ -22,20 +22,24 @@ plot_view = {
         ]
     }
 
-graph_size = pow(2,15)
+graph_size = pow(2,20)
 query_size = pow(2,15)
 tx_size = pow(2,14)
 page_size = 14
 cases = []
 processes = []
 num_proc = 3
-#single machine setup
+#machine 0 only setup
 for i in xrange(num_proc):
-    processes.append(([0],i))
+    processes.append(([0],i+1))
     pass
-#two machine setup
+#machine 1 only setup
 for i in xrange(num_proc):
-    processes.append(([0,1],i))
+    processes.append(([1],i+1))
+    pass
+#local+remote machine setup
+for i in xrange(num_proc):
+    processes.append(([0,1],i+1))
     pass
 
 cases.append(
