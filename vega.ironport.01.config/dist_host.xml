@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigList>
+
+<EngineList>
+ <Engine version="ig.3.0" home="/data/InfiniteGraph/3.0/" model="InfiniteGraph"/>
+ <Engine version="ig.3.1" home="/data/InfiniteGraph/3.1/" model="IG"/>
+</EngineList>
+
+   <Config name="host1">
+     <Lockserver address="dev-analysis-nosql-01.vega.ironport.com"/>
+      <Host address="dev-analysis-nosql-01.vega.ironport.com">
+       <Disk location="/data/benchmark"/>
+      </Host>   
+      <Host address="dev-analysis-nosql-02.vega.ironport.com">
+       <Disk location="/data/benchmark"/>
+      </Host>  
+  </Config>
+</ConfigList>
