@@ -4,7 +4,8 @@ description = "Distributed Vertex Ingest/Query"
 table_view = [
     [{"sTitle":"Version"},{"content":"object.engine()"}],
     [{"sTitle":"Platform"},{"content":"object.platform()"}],
-    [{"sTitle":"Process"},{"content":"'T:%d'%(object.processes())"}],
+    [{"sTitle":"Process"},{"content":"'%d'%(object.processes())"}],
+    [{"sTitle":"Setup"},{"content":"object.process_description()"}],
     [{"sTitle":"Rate (v/s)"},{"content":"'%.2f'%(object.rate_avg())"}],
     [{"sTitle":"Time (ms)"},{"content":"object.time_avg()"}]
     ]
@@ -28,7 +29,7 @@ tx_size = pow(2,14)
 page_size = 14
 cases = []
 processes = []
-num_proc = 3
+num_proc = 8
 #machine 0 only setup
 for i in xrange(num_proc):
     processes.append(([0],i+1))
