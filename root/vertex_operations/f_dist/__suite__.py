@@ -29,7 +29,7 @@ tx_size = pow(2,14)
 page_size = 14
 cases = []
 processes = []
-num_proc = 8
+num_proc = 16
 
 def generate_case(_processes_,_graph_size_,_new_,name="ingest"):
     return {
