@@ -66,7 +66,7 @@ for i in xrange(num_proc):
 for i in xrange(num_proc):
     process = [([1],i+1)]
     cases.append(init_case)
-    cases.append(generate_case_(process,graph_size,0)
+    cases.append(generate_case_(process,graph_size,0))
     pass
 
 
@@ -74,5 +74,5 @@ for i in xrange(num_proc):
 for i in xrange(num_proc):
     process = [([0,1],i+1)]
     cases.append(init_case)
-    cases.append(generate_case_(process,graph_size,0)
+    cases.append(generate_case_(process,graph_size,0))
     pass
