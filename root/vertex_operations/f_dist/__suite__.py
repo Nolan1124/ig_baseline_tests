@@ -30,39 +30,74 @@ page_size = 14
 cases = []
 processes = []
 num_proc = 8
+
+def generate_case(_processes_,_graph_size_,_new_):
+    return {
+        "name":"ingest",
+        "description":"Vertex Ingestion as a function of hosts (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
+        "type":"vertex_ingest",
+        "data":
+        {
+            "template":["basic_non_unique"],
+            "config":["dist_host:host1"],
+            "page_size":[14],
+            "threads":[1],
+            "use_index":[0],
+            "new":_new_,
+            "txsize":[tx_size],
+            "size":[_graph_size_],
+            "ig_version":["ig.3.1"],
+            "process":_processes_,
+            },
+        "table_view":table_view,
+        "plot_view":plot_view
+        }
+
+init_case = generate_case([([0],1)],1,1) 
+
 #machine 0 only setup
 for i in xrange(num_proc):
-    processes.append(([0],i+1))
+    process = [(([0],i+1))]
+    cases.append(init_case)
+    cases.append(generate_case(process,graph_size,0))
     pass
+
+
+
+
 #machine 1 only setup
 for i in xrange(num_proc):
-    processes.append(([1],i+1))
+    #process = [([1],i+1)]
+    #cases.append(generate_case_(process,1,1)
     pass
+
+
 #local+remote machine setup
 for i in xrange(num_proc):
-    processes.append(([0,1],i+1))
+    #processes.append(([0,1],i+1))
     pass
 
-cases.append(
-    {
-    "name":"ingest",
-    "description":"Vertex Ingestion as a function of hosts (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
-    "type":"vertex_ingest",
-    "data":
-    {
-    "template":["basic_non_unique"],
-    "config":["dist_host:host1"],
-    "page_size":[14],
-    "threads":[1],
-    "use_index":[0],
-    "new":1,
-    "txsize":[tx_size],
-    "size":[graph_size],
-    "ig_version":["ig.3.1"],
-    "process":processes,
-    },
-    "table_view":table_view,
-    "plot_view":plot_view
-    }
-    )
-
+if 0:
+    cases.append(
+        {
+            "name":"ingest",
+            "description":"Vertex Ingestion as a function of hosts (page size=%d, transaction size=%d)"%(pow(2,page_size),tx_size),
+            "type":"vertex_ingest",
+            "data":
+            {
+                "template":["basic_non_unique"],
+                "config":["dist_host:host1"],
+                "page_size":[14],
+                "threads":[1],
+                "use_index":[0],
+                "new":1,
+                "txsize":[tx_size],
+                "size":[graph_size],
+                "ig_version":["ig.3.1"],
+                "process":processes,
+                },
+            "table_view":table_view,
+            "plot_view":plot_view
+            }
+        )
+    pass
