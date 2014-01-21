@@ -41,7 +41,7 @@ for page_size in page_sizes:
             "new":1,
             "txsize":[txsize],
             "size":[graph_size],
-            "ig_version":["ig.3.1","ig.3.2"]
+            "ig_version":["ig.3.2","ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view
