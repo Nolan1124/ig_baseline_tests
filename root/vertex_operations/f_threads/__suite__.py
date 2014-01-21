@@ -42,7 +42,7 @@ index_case = {
         "new":1,
         "txsize":[tx_size],
         "size":[graph_size],
-        "ig_version":["ig.3.0","ig.3.1"]
+        "ig_version":["ig.3.2","ig.3.1"]
         },
     "table_view":table_view,
     "plot_view":plot_view
@@ -65,7 +65,7 @@ for thread in threads:
             "use_index":[1],
             "size":[query_size],
             "graph_size":[graph_size],
-            "ig_version":["ig.3.0","ig.3.1"]
+            "ig_version":["ig.3.2","ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view
@@ -89,7 +89,7 @@ cases = [
     "new":1,
     "txsize":[tx_size],
     "size":[graph_size],
-    "ig_version":["ig.3.0","ig.3.1"]
+    "ig_version":["ig.3.2","ig.3.1"]
     },
     "table_view":table_view,
     "plot_view":plot_view

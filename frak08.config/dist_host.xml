@@ -2,17 +2,17 @@
 <ConfigList>
 
 <EngineList>
- <Engine version="ig.3.0" home="/disk1/InfiniteGraph/3.0/" model="InfiniteGraph"/>
- <Engine version="ig.3.1" home="/disk1/InfiniteGraph/3.1/" model="IG"/>
+ <Engine version="ig.3.1" home="/disk1/InfiniteGraph/3.1/" model="InfiniteGraph" interface="3.1"/>
+ <Engine version="ig.3.2" home="/disk1/InfiniteGraph/3.2/" model="IG" interface="3.2"/>
 </EngineList>
 
    <Config name="host1">
      <Lockserver address="frak08-b11.objy.com"/>
       <Host address="frak08-b11.objy.com">
-        <Disk location="/disk1/benchmark_data_2"/>
+        <Disk location="/disk1/benchmark_data"/>
       </Host>   
     <Host address="frak07-b09.objy.com">
-       <Disk location="/disk1/benchmark_data_2"/>
+       <Disk location="/disk1/benchmark_data"/>
     </Host>  
   </Config>
 </ConfigList>

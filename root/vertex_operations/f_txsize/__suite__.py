@@ -46,7 +46,7 @@ cases = [
     "new":1,
     "size":[graph_size],
     "txsize":tx_sizes,
-    "ig_version":["ig.3.0","ig.3.1"]
+    "ig_version":["ig.3.1","ig.3.2"]
     },
     "table_view":table_view,
     "plot_view":plot_view
@@ -69,7 +69,7 @@ for tx_size in tx_sizes:
             "new":1,
             "txsize":[tx_size],
             "size":[graph_size],
-            "ig_version":["ig.3.0","ig.3.1"]
+            "ig_version":["ig.3.2","ig.3.1"]
             },
         "table_view":table_view,
         "plot_view":plot_view
@@ -88,7 +88,7 @@ for tx_size in tx_sizes:
             "txsize":[tx_size],
             "size":[query_size],
             "graph_size":[graph_size],
-            "ig_version":["ig.3.0","ig.3.1"]
+            "ig_version":["ig.3.1","ig.3.2"]
             },
         "table_view":table_view,
         "plot_view":plot_view

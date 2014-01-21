@@ -49,7 +49,7 @@ cases = [
             "size":[graph_size],
             "txsize":[tx_size],
             "txlimit":[-1],
-            "ig_version":["ig.3.1","ig.3.0"]
+            "ig_version":["ig.3.1","ig.3.2"]
             },
         "table_view":table_view,
         "plot_view":plot_view
